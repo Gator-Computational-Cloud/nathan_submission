@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="Description" content="Credential Viewer">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCC | Credentials</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/superhero/bootstrap.min.css" integrity="sha384-HnTY+mLT0stQlOwD3wcAzSVAZbrBp141qwfR4WfTqVQKSgmcgzk+oP0ieIyrxiFO" crossorigin="anonymous">
+</head>
+<body>
+  <!-- begin style -->
+  <style media="screen">
+  .brad-100 {
+    border-radius: 100vh;
+  }
+  .logbutt:hover {
+    color: white;
+  }
+  .inp {
+    border-radius: 3px;
+    border-color: #ebebeb;
+  }
+  .nav-link.active {
+    border-color: rgba(223, 105, 26, 0.1);
+  }
+  </style>
+  <!-- end stylre -->
+
+  <!-- begin navbar -->
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">GCC</a>
+    <button onclick="window.location='/logout';" class="logbutt btn btn-sm btn-primary" style="border-color:white">
+      Logout
+    </button>
+  </nav>
+  <!-- end navbar -->
+  <div class="container-fluid" style="margin-top:15px">
+    <h2>Welcome, {{ user.username }}</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="btn-group w-100 btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="option1" autocomplete="off"> Import a Workflow
+          </label>
+          <label class="btn btn-primary" onclick="window.location.href='../../userhome/executewf'">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Execute a Workflow
+          </label>
+          <label class="btn btn-primary" onclick="window.location.href='../../userhome/credentials'">
+            <input type="radio" name="options" id="option4" autocomplete="off"> AWS Credentials
+          </label>
+        </div>
+        <div class="jumbotron" style="text-align:center">
+          <h1><b>Workflow Importer</b></h1>
+          <h5>Please read the notes below</h5>
+          <hr></hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <ol style="float:left;text-align:center;padding:10px">
+                  <li><b>Specification File:</b> This upload should consist of a file in XML format that contains the functional structure of the workflow that is being uploaded.</li>
+                  <li><b>Node Files:</b> This upload should consist of a folder which contains all of the zipped node files that are required for the workflow that is being uploaded.</li>
+                </ol>
+                <p>
+                  <small>The name of any uploaded XML specification file will automatically become the name of the workflow that is being imported. The name of any uploaded zipped node file will automatically become the name of then node in the workflow that is being imported.</small>
+                </p>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <form method="post" style="margin-top:15px;display:inline-block;margin-left:auto;margin-right:auto;" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {% load widget_tweaks %}
+                  {% for el in form %}
+                  <div class="form-group" style="width:200px">
+                    {{ el|add_label_class:'col-form-label' }}
+                    {{ el|add_class:'form-control-file' }}
+                  </div>
+                  {% endfor %}
+                  <hr></hr>
+                  <input type="submit" value="Upload workflow" class="btn btn-primary brad-100" style="border-radius:3px">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="Description" content="Main shop page">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCC | Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/superhero/bootstrap.min.css" integrity="sha384-HnTY+mLT0stQlOwD3wcAzSVAZbrBp141qwfR4WfTqVQKSgmcgzk+oP0ieIyrxiFO" crossorigin="anonymous">
+</head>
+<body>
+
+  <style media="screen">
+  .brad-100 {
+    border-radius: 100vh;
+  }
+  .logbutt {
+    background-color: #2b3e50;
+  }
+  .logbutt:hover {
+    opacity: .8;
+  }
+  .inp {
+    border-radius: 3px;
+    border-color: #ebebeb;
+  }
+  </style>
+  <!-- end stylre -->
+
+  <!-- begin navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">GCC</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Login
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- begin jumbotron -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" style="margin-top:2.5vh;border-radius:5px;text-align:center">
+          <h1 class="display-5"><b>Welcome to GCC</b></h1>
+          <h5>Please login</h5>
+          <hr class="my-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <form method="post" style="display:inline-block;margin-left:auto;margin-right:auto;">
+                  {% csrf_token %}
+                  {% load widget_tweaks %}
+                  {% for el in form %}
+                  <div class="form-group" style="width:200px">
+                    {{ el|add_label_class:'col-form-label' }}
+                    {{ el|add_class:'form-control form-control-sm inp' }}
+                  </div>
+                  {% endfor %}
+                  <input type="submit" value="Sign in" class="btn btn-sm logbutt" style="border-radius:3px">
+                </form>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+          <hr class="my-4">
+          <p class="lead">Not signed up? Make an account here!</p>
+          <p class="lead">
+            <a class="btn btn-primary brad-100" href="/signup" role="button">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end jumbotron -->
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</html>

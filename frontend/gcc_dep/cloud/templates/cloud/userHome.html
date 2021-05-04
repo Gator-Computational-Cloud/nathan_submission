@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="Description" content="Home">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCC | Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/superhero/bootstrap.min.css" integrity="sha384-HnTY+mLT0stQlOwD3wcAzSVAZbrBp141qwfR4WfTqVQKSgmcgzk+oP0ieIyrxiFO" crossorigin="anonymous">
+</head>
+<body>
+  <!-- begin style -->
+  <style media="screen">
+  .brad-100 {
+    border-radius: 100vh;
+  }
+  .logbutt:hover {
+    color: white;
+  }
+  .inp {
+    border-radius: 3px;
+    border-color: #ebebeb;
+  }
+  .nav-link.active {
+    border-color: rgba(223, 105, 26, 0.1);
+  }
+  </style>
+  <!-- end stylre -->
+
+  <!-- begin navbar -->
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">GCC</a>
+    <button onclick="window.location='/logout';" class="logbutt btn btn-sm btn-primary" style="border-color:white">
+      Logout
+    </button>
+  </nav>
+  <!-- end navbar -->
+  <div class="container-fluid" style="margin-top:15px">
+    <h2>Welcome, {{ user.username }}</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="btn-group w-100 btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-primary" onclick="window.location.href='../../userhome/createwf'">
+            <input type="radio" name="options" id="option1" autocomplete="off"> Import a Workflow
+          </label>
+          <label class="btn btn-primary" onclick="window.location.href='../../userhome/executewf'">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Execute a Workflow
+          </label>
+          <label class="btn btn-primary" onclick="window.location.href='../../userhome/credentials'">
+            <input type="radio" name="options" id="option4" autocomplete="off"> AWS Credentials
+          </label>
+        </div>
+        <div class="jumbotron" style="text-align:center">
+          <h1><b>Welcome to GCC</b></h1>
+          <h5>Please read the instructions below</h5>
+          <hr></hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p>GCC is a tool that allows for the creation, planning, and execution of budget-deadline-constrained workflows.
+                With the help of this tool, the user is able to upload source code and data required for certain nodes of an execution, as well as a
+                workflow specific xml file which allows the program to know which nodes must be executed, and in what order to do so. The user can then select
+                a budget and time deadline which the tool will use to optimize both the efficiency and cost of the execution. The 'Create a Workflow' tab at the top of this page will
+                get you started on your workflows so you can start taking advantage of this tool!</p>
+                <hr></hr>
+                <small><b>Since GCC uses Amazon AWS as a backend, please <a href="../../userhome/credentials">provide the tool</a> with updated credentials in order for any executions to work properly!</b></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</html>

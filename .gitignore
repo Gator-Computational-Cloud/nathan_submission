@@ -1,0 +1,6 @@
+genv/
+*.log
+*.pot
+*.pyc
+__pycache__/
+Pipfile
