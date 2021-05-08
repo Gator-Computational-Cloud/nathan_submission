@@ -1,5 +1,31 @@
 \begin{thebibliography}{1}
 
+\bibitem{abdullahi2016symbiotic}
+{\sc Abdullahi, M., Ngadi, M.~A., et~al.}
+\newblock Symbiotic organism search optimization based task scheduling in cloud
+  computing environment.
+\newblock {\em Future Generation Computer Systems 56\/} (2016), 640--650.
+
+\bibitem{awad2015enhanced}
+{\sc Awad, A., El-Hefnawy, N., and Abdel\_kader, H.}
+\newblock Enhanced particle swarm optimization for task scheduling in cloud
+  computing environments.
+\newblock {\em Procedia Computer Science 65\/} (2015), 920--929.
+
+\bibitem{jang2012study}
+{\sc Jang, S.~H., Kim, T.~Y., Kim, J.~K., and Lee, J.~S.}
+\newblock The study of genetic algorithm-based task scheduling for cloud
+  computing.
+\newblock {\em International Journal of Control and Automation 5}, 4 (2012),
+  157--162.
+
+\bibitem{kaur2012efficient}
+{\sc Kaur, S., and Verma, A.}
+\newblock An efficient approach to genetic algorithm for task scheduling in
+  cloud computing environment.
+\newblock {\em International Journal of Information Technology and Computer
+  Science (IJITCS) 4}, 10 (2012), 74.
+
 \bibitem{kim2017analysis}
 {\sc Kim, S.~H., Jang, S.~Y., and Yang, K.~H.}
 \newblock Analysis of the determinants of software-as-a-service adoption in
@@ -17,5 +43,11 @@
 \newblock Microsoft office 365-cloud in business environment.
 \newblock In {\em 2012 Proceedings of the 35th International Convention
   MIPRO\/} (2012), IEEE, pp.~1434--1439.
+
+\bibitem{srichandan2018task}
+{\sc Srichandan, S., Kumar, T.~A., and Bibhudatta, S.}
+\newblock Task scheduling for cloud computing using multi-objective hybrid
+  bacteria foraging algorithm.
+\newblock {\em Future Computing and Informatics Journal 3}, 2 (2018), 210--230.
 
 \end{thebibliography}
