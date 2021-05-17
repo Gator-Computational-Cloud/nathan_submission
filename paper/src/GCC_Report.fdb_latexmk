@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex GCC_Report"] 1620436000 "GCC_Report.aux" "GCC_Report.bbl" "GCC_Report" 1620436002
+["bibtex GCC_Report"] 1621286669 "GCC_Report.aux" "GCC_Report.bbl" "GCC_Report" 1621286671
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/acm.bst" 1292289607 21064 c61a48664f3c347ce7f73c1a6a530506 ""
-  "GCC_Report.aux" 1620436002 6044 a1c2a5bb902970dd20644e86f5aa3f2c "pdflatex"
-  "refs.bib" 1620432982 3644 1821a9d5e3cbda8662d3d0957f736061 ""
+  "GCC_Report.aux" 1621286671 6474 b2441f9c6e9eff6d55b608db5534a62f "pdflatex"
+  "refs.bib" 1621286631 3928 621102729b7be71fb377c9f0715af9a8 ""
   (generated)
-  "GCC_Report.bbl"
   "GCC_Report.blg"
-["pdflatex"] 1620436001 "GCC_Report.tex" "GCC_Report.pdf" "GCC_Report" 1620436002
+  "GCC_Report.bbl"
+["pdflatex"] 1621286669 "GCC_Report.tex" "GCC_Report.pdf" "GCC_Report" 1621286671
   "/etc/texmf/web2c/texmf.cnf" 1600192404 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -20,6 +20,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/psyro.tfm" 1136768653 1544 23a042a74981a3e4b6ce2e350e390409 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8c.tfm" 1136768653 1340 d2f6275bc4fa3f07e3bc50aae2c71eab ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1136768653 4524 6bce29db5bc272ba5f332261583fee9c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm" 1136768653 2124 2601a75482e9426d33db523edf23570a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm" 1136768653 4408 25b74d011a4c66b7f212c0cc3c90061b ""
@@ -52,6 +53,7 @@
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvr8c.vf" 1136768653 3556 570286160ebfdd10d887aaa718e2e64d ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvro7t.vf" 1136768653 1372 9948cedecdb0445a3b5cf1b8a8082ab8 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf" 1136768653 1372 788387fea833ef5963f4c5bffe33eb89 ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb8c.vf" 1136768653 3556 f148a8ed6ef01fed553027171e4f9b22 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf" 1136768653 1380 0ea3a3370054be6da6acd929ec569f06 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf" 1136768653 1948 7330aeef3af211edff3b35fb2c12a0fd ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf" 1136768653 1384 a9d8adaf491ce34e5fba99dc7bbe5f39 ""
@@ -201,6 +203,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd" 1137110629 329 aee7226812ba4138ac67a018466b488d ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty" 1156702453 857 6c716f26c5eadfb81029fcd6ce2d45e6 ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd" 1137110629 1185 3390c7c308a2c06e3492bc49746a4996 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd" 1137110629 619 96f56dc5d1ef1fe1121f1cfeec70ee0c ""
   "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty" 1369619135 15542 c4cc3164fe24f2f2fbb06eb71b1da4c4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575674187 9715 b051d5b493d9fe5f4bc251462d039e5f ""
@@ -223,15 +226,15 @@
   "Figures/makespan_vs_levelcount.png" 1620361772 18427 4fa131e1710b0e73fc46430e860296a5 ""
   "Figures/makespan_vs_nodecount.png" 1620333656 12567 a2d88f0231d3041c6cd6f70d7ec6ed13 ""
   "Figures/zip_example.png" 1620140472 87011 65b07be5a84405278b246b9db1714f5f ""
-  "GCC_Report.aux" 1620436002 6044 a1c2a5bb902970dd20644e86f5aa3f2c "pdflatex"
-  "GCC_Report.bbl" 1620436001 2065 f20a40cfdc10615dbbf143c6795f5040 "bibtex GCC_Report"
-  "GCC_Report.out" 1620436002 856 558f53c3dae43a4a96e8d6556860cbb7 "pdflatex"
-  "GCC_Report.tex" 1620435996 45533 f4489dfaa0636258b75f6e9cb41686a3 ""
-  "GCC_Report.toc" 1620436002 1154 5dc89b3930e5f04bc1c28ab998d9ea9e "pdflatex"
+  "GCC_Report.aux" 1621286671 6474 b2441f9c6e9eff6d55b608db5534a62f "pdflatex"
+  "GCC_Report.bbl" 1621286669 2275 ba7da3f4b3ef00625034f154f4a0fa46 "bibtex GCC_Report"
+  "GCC_Report.out" 1621286671 856 196f394b5df917fe0f1e66f26d4419d8 "pdflatex"
+  "GCC_Report.tex" 1621286657 46844 abced3d77119ace91b6801d3f8fb3940 ""
+  "GCC_Report.toc" 1621286671 1154 8a9d1a38137131a75ac35249a2eb64ed "pdflatex"
   "SelfArx.cls" 1603335503 8092 737c8d1591f9545f221c870f69e6d87b ""
   (generated)
+  "GCC_Report.pdf"
   "GCC_Report.toc"
   "GCC_Report.out"
-  "GCC_Report.pdf"
   "GCC_Report.aux"
   "GCC_Report.log"

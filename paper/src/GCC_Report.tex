@@ -263,7 +263,28 @@ The XML parser is the portion of the CWFP that handles the raw input data. When 
 \label{fig:dagexample}
 \end{figure}
 
-As mentioned before, the workflow planner creates a directed acyclic graph data type to represent a workflow object. In order to do this, the planning function utilizes the ArrayList and HashMap that are created by the XML parser. Firstly, two ArrayList objects called "lint" and "compIds" are created, as well as an integer "max" which is initialized to zero. Next, a while loop is created and it runs until it is broken out of using a logical break statement within the loop. Also within this loop, there are two for loops. These for loops are not nested. In the first for loop, all of the nodes in a HashMap "hm" are iterated through. Initially, "hm" is empty so the first for loop does not run on the first iteration of the while loop. If "hm" is populated, "lint" and "compIds" receive the node and node id for each object within "hm" respectively. Once this is done, a logical check happens to see if "lint" is equal to the ArrayList set by the previous section. If this is true, then the while loop is broken out of. If it is false, the second main for loop is invoked. This check is to ensure that when everything is added to the graph that the while loop does not continue to run. If the second main for loop is invoked, meaning the planning has not completed, it iterates through each node in the ArrayList from the XML parser. For each node, there is some validation that occurs to make sure it is valid and exists, and then it is added to the HashMap "hm". This marks the end of an iteration of the outer while loop and, depending on if "hm" is fully populated or not, it will run again. Once outside of this while loop, all levels within "hm" are inserted into a directed acyclic graph and this is returned to the user. Each graph contains a set of nodes, and each node contains a set of edges which allows for an efficient execution once the graph is created. Figure \ref{fig:dagexample} shows the directed acyclic graph that would result from running the workflow specification from figure \ref{fig:xmlspec} through the CWFP. Algorithm \ref{alg:algorithm1} provides a visual representation of the CWFP's approach. In this algorithm, ledger is simply a HashMap linking a node object to it's respective id.
+As mentioned before, the workflow planner creates a directed acyclic graph data type to represent a workflow object. In order to do this, the planning function utilizes the ArrayList and HashMap that are created by the XML parser. Firstly, two ArrayList objects called "lint" and "compIds" are created, as well as an integer "max" which is initialized to zero. Next, a while loop is created and it runs until it is broken out of using a logical break statement within the loop. Also within this loop, there are two for loops. These for loops are not nested. In the first for loop, all of the nodes in a HashMap "hm" are iterated through. Initially, "hm" is empty so the first for loop does not run on the first iteration of the while loop. If "hm" is populated, "lint" and "compIds" receive the node and node id for each object within "hm" respectively. Once this is done, a logical check happens to see if "lint" is equal to the ArrayList set by the previous section. If this is true, then the while loop is broken out of. If it is false, the second main for loop is invoked. This check is to ensure that when everything is added to the graph that the while loop does not continue to run. If the second main for loop is invoked, meaning the planning has not completed, it iterates through each node in the ArrayList from the XML parser. For each node, there is some validation that occurs to make sure it is valid and exists, and then it is added to the HashMap "hm". This marks the end of an iteration of the outer while loop and, depending on if "hm" is fully populated or not, it will run again. Once outside of this while loop, all levels within "hm" are inserted into a directed acyclic graph and this is returned to the user. Each graph contains a set of nodes, and each node contains a set of edges which allows for an efficient execution once the graph is created. Figure \ref{fig:dagexample} shows the directed acyclic graph that would result from running the workflow specification from figure \ref{fig:xmlspec} through the CWFP. Algorithm \ref{alg:algorithm1} provides a visual representation of the CWFP's approach. In this algorithm, ledger is simply a HashMap linking a node object to it's respective id. Additionally, figure \ref{fig:mapexample} shows a table which represents the mapping that takes place in GCC to execute a workflow. This table shows the mapping for the workflow shown in figure \ref{fig:dagexample}. The table contains a cost element as this is a very important part of workflows. Currently, GCC has the ability to execute workflows using any type of algorithm that it is provided. It was designed in a way to make it more managable and customizable in the future. One algorithm that currently works in GCC is the BHEFT algorithm. This algorithm takes into account execution time and budget constraints to execute workflows in both a time and cost effective manner \cite{verma2015cost}. This allows users greater control over their executions and ensures that their plans stay within a comfortable budget range.
+
+\begin{figure}[t!]
+\centering
+\begin{center}
+\begin{tabular}{|| c | c | c | c ||}
+	\hline
+	\textbf{Node} & \textbf{Level} & \textbf{Execution Time (hr)} & \textbf{Cost (\$)} \\
+	\hline\hline
+	n1 & 1 & 10 & 0.072 \\
+	\hline
+	n2 & 2 & 5 & 0.036 \\
+	\hline
+	n3 & 2 & 5 & 0.036 \\
+	\hline
+	n4 & 3 & 2.5 & 0.018 \\
+	\hline
+\end{tabular}
+\end{center}
+\caption{Mapping of tasks by the CWFP using the graph in figure \ref{fig:dagexample} as a reference}
+\label{fig:mapexample}
+\end{figure}
 
 \begin{algorithm}
 \footnotesize

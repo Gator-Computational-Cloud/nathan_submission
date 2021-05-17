@@ -50,4 +50,10 @@
   bacteria foraging algorithm.
 \newblock {\em Future Computing and Informatics Journal 3}, 2 (2018), 210--230.
 
+\bibitem{verma2015cost}
+{\sc Verma, A., and Kaushal, S.}
+\newblock Cost-time efficient scheduling plan for executing workflows in the
+  cloud.
+\newblock {\em Journal of Grid Computing 13}, 4 (2015), 495--506.
+
 \end{thebibliography}
